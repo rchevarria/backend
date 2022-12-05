@@ -2,19 +2,24 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const Task = db.define("task", {
-
-  title: {
+  
+ description: {
+    type: Sequelize.STRING
+    allowNull: false
+  },
+    
+ priority: {
     type: Sequelize.STRING,
     allowNull: false
   },
 
-  timeslot: {
-    type: Sequelize.STRING
-  },
+  completion: {
+    type: Sequelize.STRING,
+    allowNull: false
+    defaultValue: "false"
+  }
 
-  location: {
-    type: Sequelize.STRING
-  },
+  
 
   // isOpen: {
   //   type: Sequelize.BOOLEAN,

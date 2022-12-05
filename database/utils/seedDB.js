@@ -2,19 +2,19 @@ const { Employee, Task } = require('../models');
 
 const seedDB = async () => {
 	const dummyEmployee = await Employee.create({
-		firstname: "Melissa",
-		lastname: "Lynch",
-		department: "Computer Science"
+		firstname: "John",
+		lastname: "Doe",
+		department: "Marketting"
 	});
 	const dummyEmployee2 = await Employee.create({
-		firstname: "Kim",
-		lastname: "Kardashian"
+		firstname: "Jane",
+		lastname: "Doe"
 	});
 
 	const dummyTask = await Task.create({
-		title: "CSCI 39548",
-        location: "C107",
-        timeslot: "W 5:35 - 8:15 PM"
+		description: "Data Entry",
+        priority: "medium",
+        completion: "false"
 	});
 
 	await dummyTask.setEmployee(dummyEmployee);
