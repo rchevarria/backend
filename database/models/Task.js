@@ -14,9 +14,9 @@ const Task = db.define("task", {
   },
 
   completion: {
-    type: Sequelize.STRING,
+    type: Sequelize.BOOLEAN,
     allowNull: false
-    defaultValue: "false"
+    defaultValue: false
   }
 
   
