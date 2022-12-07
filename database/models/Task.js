@@ -4,7 +4,7 @@ const db = require('../db');
 const Task = db.define("task", {
   
  description: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
     allowNull: false
   },
     
@@ -15,7 +15,7 @@ const Task = db.define("task", {
 
   completion: {
     type: Sequelize.BOOLEAN,
-    allowNull: false
+    allowNull: false,
     defaultValue: false
   }
 

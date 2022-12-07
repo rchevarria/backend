@@ -74,7 +74,7 @@ const configureApp = async () => {
 
 const bootApp = async () => {
   //creates local database if it doesn't exist
-  await createDB();
+  // await createDB();
 
   //calls sync which is a Sequelize method that creates the database tables
   //calls seedDB which will insert initial data into the tables
