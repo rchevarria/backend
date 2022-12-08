@@ -13,7 +13,7 @@ const syncDatabase = async () => {
     //remove the option if you want the data to persist, ie:
     //await db.sync();
 
-    await db.sync();
+    await db.sync({force:true});
     console.log('------Synced to db--------')
     await seedDB();
     console.log('--------Successfully seeded db--------');
