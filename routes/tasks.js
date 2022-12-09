@@ -9,11 +9,11 @@ const { Task, Employee } = require('../database/models');
 const ash = require('express-async-handler');
 
 /** GET ALL TASKS: then/catch */
-router.get('/', function(req, res, next) {
-   Task.findAll({include: [Employee]})
-     .then(tasks => res.status(200).json(tasks))
-     .catch(err => next(err));
- });
+//router.get('/', function(req, res, next) {
+//   Task.findAll({include: [Employee]})
+//    .then(tasks => res.status(200).json(tasks))
+//     .catch(err => next(err));
+// });
 
 /** GET ALL COURSES: async/await */
 // router.get('/', async (req, res, next) => {
